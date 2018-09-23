@@ -33,27 +33,27 @@ En esta clase se incluye el metodo esNumero() el cual verificara que el token ge
 
 ## 5. Clase Calculadora
 Esta es la clase principal desde donde se ejecutaran todas las operaciones ingresadas por el usuario desde el menu principal.
-__Metodo calc()__
+* __Metodo calc()__
 Este metodo recibe un String que contiene la notacion ingresada por el usuario y desde la cual se dividira en tokens para poder verificar si el toquen es un numero double o es un operador
-__Metodo sumar()__
+* __Metodo sumar()__
 Este metodo procedera a hacer la sumatoria de los datos una vez identificados como numeros
-__Metodo restar()__
+* __Metodo restar()__
 Este metodo procedera a hacer la substraccion de los datos una vez identificados como numeros
-__Metodo multiplicar()__
+* __Metodo multiplicar()__
 Este metodo procedera a hacer la multiplicacion de los datos una vez identificados como numeros
-__Metodo dividir()__
+* __Metodo dividir()__
 Este metodo procedera a hacer la division de los datos una vez identificados como numeros
-__Metodo historial()__
+* __Metodo historial()__
 Metodo que desplegara en pantalla el listado de operaciones ingresadas por el usuario asi como su resultado
-__Metodo ordenAscendente()__
+* __Metodo ordenAscendente()__
 Metodo que reordena el listado y lo despliegua los resultados de menor a mayor
-__Metodo ordenDescendente()__
+* __Metodo ordenDescendente()__
 Metodo que reordena el listado y lo despliegua los resultados de mayor a menor
-__Metodo tiempoEspera()__
+* __Metodo tiempoEspera()__
 Metodo de caracter cosmetico que desplegara en la pantalla un tiempo de espera mientras se reordenan los datos
-__Metodo tiempoGuardado()__
+* __Metodo tiempoGuardado()__
 Metodo de caracter cosmetico que desplegara en la pantalla un tiempo de guardado una vez que el usuario salga del programa y se genere el archivo de texto con el historial
-__Metodo guardar()__
+* __Metodo guardar()__
 Metodo que procedera a generar un archivo .txt que contendra el historial de operaciones ingresadas por el usuario. Se desplegaran en la forma en que fueron ingresados por el usuario o de la forma ascendente o descendente que el usuario eligio anteriormente
 
 ## Clase Menu
@@ -70,7 +70,7 @@ Clase principal donde se creara un objeto de tipo Menu para asi poder ejecutar l
 
 ## Enlaces externos
 
-1. Documentacion en [javadoc](https://www.google.com) 
+1. Documentacion en [javadoc](https://github.com/secaidastudio/ProyectoFinal/tree/master/secaidaStudio/dist/javadoc) 
 2. Diagrama [UML](https://drive.google.com/file/d/12g0jrZHN3NraNEtpvnwNdmPKEHpVoqMy/view?usp=sharing)
 3. Enlace al repositorio de [GitHub]
  
