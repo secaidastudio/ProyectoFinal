@@ -37,7 +37,7 @@ Esta es la clase principal desde donde se ejecutaran todas las operaciones ingre
 Este metodo recibe un String que contiene la notacion ingresada por el usuario y desde la cual se dividira en tokens para poder verificar si el toquen es un numero double o es un operador
 * __Metodo sumar()__
 Este metodo procedera a hacer la sumatoria de los datos una vez identificados como numeros
-* __Metodo restar()__
+* __Metodo restar()__https://github.com/secaidastudio/ProyectoFinal
 Este metodo procedera a hacer la substraccion de los datos una vez identificados como numeros
 * __Metodo multiplicar()__
 Este metodo procedera a hacer la multiplicacion de los datos una vez identificados como numeros
@@ -72,5 +72,5 @@ Clase principal donde se creara un objeto de tipo Menu para asi poder ejecutar l
 
 1. Documentacion en [javadoc](https://github.com/secaidastudio/ProyectoFinal/tree/master/secaidaStudio/dist/javadoc) 
 2. Diagrama [UML](https://drive.google.com/file/d/12g0jrZHN3NraNEtpvnwNdmPKEHpVoqMy/view?usp=sharing)
-3. Enlace al repositorio de [GitHub]
+3. Enlace al repositorio de [GitHub](https://github.com/secaidastudio/ProyectoFinal)
  
