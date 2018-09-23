@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ProyectoFinal">
+  <ClassDiagramComponents>
+    <Class name="CalcPrincipal" package="ProyectoFinal" visibility="public" xPosition="821.0" yPosition="806.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Calculadora" package="ProyectoFinal" visibility="public" xPosition="828.0" yPosition="296.0">
+      <Fields>
+        <Field name="pila" type="Pila" visibility="package"/>
+        <Field name="lista" type="List&lt;String&gt;" visibility="package"/>
+        <Field name="lista2" type="List&lt;Double&gt;" visibility="package"/>
+        <Field name="numero" type="IsNumber" visibility="package"/>
+        <Field name="valor1" type="Double" visibility="package"/>
+        <Field name="valor2" type="Double" visibility="package"/>
+        <Field name="resultado" type="Double" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="calc" returnType="void" visibility="public">
+          <Argument type="String" name="operacion"/>
+        </Method>
+        <Method name="sumar" returnType="void" visibility="public"/>
+        <Method name="restar" returnType="void" visibility="public"/>
+        <Method name="multiplicar" returnType="void" visibility="public"/>
+        <Method name="dividir" returnType="void" visibility="public"/>
+        <Method name="historial" returnType="void" visibility="public"/>
+        <Method name="ordenAscendente" returnType="void" visibility="public"/>
+        <Method name="ordenDescendente" returnType="void" visibility="public"/>
+        <Method name="tiempoEspera" returnType="void" visibility="public"/>
+        <Method name="tiempoGuardado" returnType="void" visibility="public"/>
+        <Method name="guardar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="IsNumber" package="ProyectoFinal" visibility="public" xPosition="342.0" yPosition="576.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="esNumero" returnType="boolean" visibility="public">
+          <Argument type="String" name="elemento"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Menu" package="ProyectoFinal" visibility="public" xPosition="1280.0" yPosition="296.0">
+      <Fields>
+        <Field name="input" type="Scanner" visibility="package"/>
+        <Field name="cal" type="Calculadora" visibility="package"/>
+        <Field name="operacion" type="String" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="MenuPrincipal" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Nodo" package="ProyectoFinal" visibility="public" xPosition="4.0" yPosition="296.0">
+      <Fields>
+        <Field name="siguiente" type="Nodo" visibility="package"/>
+        <Field name="data" type="double" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="getSiguiente" returnType="Nodo" visibility="public"/>
+        <Method name="setSiguiente" returnType="void" visibility="public">
+          <Argument type="Nodo" name="siguiente"/>
+        </Method>
+        <Method name="getData" returnType="double" visibility="public"/>
+        <Method name="setData" returnType="void" visibility="public">
+          <Argument type="double" name="data"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Pila" package="ProyectoFinal" visibility="public" xPosition="416.0" yPosition="296.0">
+      <Fields>
+        <Field name="inicio" type="Nodo" visibility="private"/>
+        <Field name="tamanio" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="estaVacia" returnType="boolean" visibility="public"/>
+        <Method name="push" returnType="void" visibility="public">
+          <Argument type="double" name="valor"/>
+        </Method>
+        <Method name="pop" returnType="double" visibility="public"/>
+        <Method name="getInicio" returnType="Nodo" visibility="public"/>
+        <Method name="longitud" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Operadores" package="ProyectoFinal" visibility="public" xPosition="828.0" yPosition="31.0">
+      <Methods>
+        <Method name="sumar" returnType="void" visibility="package"/>
+        <Method name="restar" returnType="void" visibility="package"/>
+        <Method name="multiplicar" returnType="void" visibility="package"/>
+        <Method name="dividir" returnType="void" visibility="package"/>
+        <Method name="historial" returnType="void" visibility="package"/>
+        <Method name="ordenAscendente" returnType="void" visibility="package"/>
+        <Method name="ordenDescendente" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="numero" source="ProyectoFinal.Calculadora" target="ProyectoFinal.IsNumber" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pila" source="ProyectoFinal.Calculadora" target="ProyectoFinal.Pila" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="ProyectoFinal.Calculadora" target="ProyectoFinal.Pila"/>
+    <HasRelation name="inicio" source="ProyectoFinal.Pila" target="ProyectoFinal.Nodo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ProyectoFinal.Calculadora" target="ProyectoFinal.Operadores"/>
+    <UseRelation source="ProyectoFinal.Nodo" target="ProyectoFinal.Nodo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ProyectoFinal.Pila" target="ProyectoFinal.Nodo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cal" source="ProyectoFinal.Menu" target="ProyectoFinal.Calculadora" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="siguiente" source="ProyectoFinal.Nodo" target="ProyectoFinal.Nodo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
